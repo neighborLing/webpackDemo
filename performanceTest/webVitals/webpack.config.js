@@ -24,16 +24,16 @@ module.exports = {
     path: path.resolve(__dirname, 'dist'),
     clean: true
   },
-  // devServer: {
-  //   static: './dist',
-  // },
+  devServer: {
+    static: './dist',
+  },
   plugins: [
     new HtmlWebpackPlugin({
       title: 'demo1',
       template: path.join(__dirname, './src/index.ejs')
     })
   ],
-  // optimization: {
-  //   runtimeChunk: 'single',
-  // },
+  optimization: {
+    runtimeChunk: 'single',
+  },
 };
