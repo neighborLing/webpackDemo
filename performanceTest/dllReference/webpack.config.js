@@ -10,19 +10,15 @@ module.exports = {
   output: {
     filename: '[name].bundle.js',
     path: path.resolve(__dirname, 'dist'),
-    clean: true
+    // clean: true
   },
-  // devServer: {
-  //   static: './dist',
-  // },
   plugins: [
+    new webpack.DllReferencePlugin({
+      manifest: require(path.join(__dirname, '../dll/dist/react.manifest.json'))
+    }),
     new HtmlWebpackPlugin({
       title: 'demo1',
       template: path.join(__dirname, './src/index.ejs')
     }),
-    new webpack.DllReferencePlugin({
-      context: __dirname,
-      manifest: path.join(__dirname, '../dll/dist/react.manifest.json')
-    })
   ],
 };
