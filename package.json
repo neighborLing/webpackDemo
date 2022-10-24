@@ -10,6 +10,8 @@
     "watch": "webpack --watch",
     "multifile": "webpack serve --config ./performanceTest/multifile/webpack.config.js",
     "serviceWorker": "webpack --config ./performanceTest/serviceWorker/webpack.config.js",
+    "dll": "webpack --config ./performanceTest/dll/webpack.config.js",
+    "dllReference": "webpack --config ./performanceTest/dllReference/webpack.config.js",
     "webVitals": "webpack serve --config ./performanceTest/webVitals/webpack.config.js"
   },
   "keywords": [],
